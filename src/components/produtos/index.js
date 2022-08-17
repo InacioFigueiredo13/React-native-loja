@@ -1,16 +1,19 @@
 import React from "react";
 import { View, TouchableOpacity, StyleSheet, Text, Image } from "react-native";
 
-export default function Produtos({nome, imagem, descricao}){
+export default function Produtos({nome, imagem, descricao}, {navigation}){
     return(
+        // onPress={() => navigation.navigate('DescProduto')}
         <TouchableOpacity style={estilo.container}>
             <Image
             style={estilo.images}
             source={require(`./../../imagens/produtos/${imagem}`)}
             />
 
-            <Text style={estilo.nome}>{nome}</Text>
-            <Text style={estilo.descricao}>{descricao}</Text>
+            <View style={estilo.textView}>
+                <Text style={estilo.nome}>{nome}</Text>
+                <Text style={estilo.descricao}>{descricao}</Text>
+            </View>
         </TouchableOpacity>
     );
 }
@@ -19,41 +22,35 @@ const estilo = StyleSheet.create({
     container: {
         borderRadius: 20,
         marginTop: 8,
+        marginBottom: 20,
+        marginLeft: 5,
         padding: 10,
         margin: 2,
         alignItems: "center",
-        justifyContent: "space-between",
         width: 200,
         height: 250,
-        marginLeft: 8,
         backgroundColor: "rgba(223, 1, 1, 0.65)",
         borderColor: "rgba(0, 0, 0, 0.5)",
-        borderWidth: 1,
-        marginBottom: 20,
-        
+        borderWidth: 1,    
+    },
+    textView:{
+        width: '100%',
+        textAlign: 'right'
     },
     nome:{
-        alignItems: "right",
         color: '#fff',
         fontSize: 15,
-        marginLeft: 110,
         fontWeight: "bold",
-        marginTop: 15
-
+        marginTop: 30,
     },
     descricao: {
-        alignItems: "right",
-        color: "#ffff",
-        fontSize: 11,
-        marginLeft: 120,
-        marginBottom: 10,
-        
+        color: '#ffff',
+        fontSize: 12.5,
     },
     images: {
-        width: "50%",
-        height: "50%",
+        width: '50%',
+        height: '50%',
         borderRadius: 25,
-        marginTop: 3,
-
+        marginTop: 5,
     }
 });

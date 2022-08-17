@@ -18,8 +18,8 @@ const estilo = StyleSheet.create({
     container: {
         display: 'flex',
         backgroundColor: 'rgba(223, 1, 1, 0.65)',
-        topPadding: 30,
         margin: 15,
+        marginBottom: -6,
         alignItems: 'center',
         alignContent: 'center',
         height: 250,
@@ -30,8 +30,7 @@ const estilo = StyleSheet.create({
     image:{
         height: '50%',
         width: 180,
-        margin: 20,
-        
+        margin: 15,
     },
     promocao:{
         backgroundColor: 'rgba(223, 1, 1, 0.75)',
@@ -40,11 +39,9 @@ const estilo = StyleSheet.create({
         fontSize: 20,
         width: '100%',
         height: '50%', 
-        marginTop: 6,
+        marginTop: 5,
         textAlign: 'center',
         borderBottomStartRadius: 16,
-        borderBottomEndRadius: 16,
-        padding: 0,
-        
+        borderBottomEndRadius: 16,    
     }
 });

@@ -1,14 +1,13 @@
 import React from 'react';
 import {View,Text,TouchableOpacity, StyleSheet, Image} from 'react-native';
 
-export default function Categorias({nome, icone}){
+export default function Categorias({nome, icone}){  
     return(
         <View>
-            
             <TouchableOpacity style={estiloCategorias.containerCategorias}>
                 <Image
                 style={estiloCategorias.icone}
-                source={require(`../../imagens/categorias_icons/${icone}`)}
+                source={require(`./../../imagens/categorias_icons/${icone}`)}
                 />
 
                 
@@ -48,7 +47,7 @@ const estiloCategorias = StyleSheet.create({
     titulo: {
         color: "black",
         fontSize: 11,
-        fontWeight: 400,
+        fontWeight: '400',
         lineWeight: 12.89,
         alignSelf: 'center',
         display: 'flex',
